@@ -18,20 +18,20 @@
   align-items: center;
   justify-content: center;
   padding: 8px 16px;
-  color: var(--sky-button-text-color);
-  font-weight: normal;
   font-size: 14px;
+  font-weight: normal;
   line-height: 1em;
-  white-space: nowrap;
+  color: var(--sky-button-text-color);
   text-align: center;
+  white-space: nowrap;
   vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
   background-color: var(--sky-button-bg-color);
   border: 1px solid var(--sky-button-border-color);
   border-radius: 4px;
   outline: none;
-  cursor: pointer;
   transition: all 0.1s ease-in-out;
-  user-select: none;
 }
 
 .sky-button:hover,
@@ -135,9 +135,9 @@
 .sky-button-disabled:hover,
 .sky-button-disabled:focus {
   color: var(--sky-button-disabled-text-color);
+  cursor: not-allowed;
   background-color: var(--sky-button-disabled-bg-color);
   border: 1px solid var(--sky-button-disabled-border-color);
-  cursor: not-allowed;
 }
 
 .sky-button-large {

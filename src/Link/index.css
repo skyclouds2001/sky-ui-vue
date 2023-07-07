@@ -5,15 +5,15 @@
 }
 
 .sky-link {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   font-size: 14px;
   font-weight: normal;
   color: var(--sky-link-text-color);
-  text-decoration: none;
   text-align: center;
+  text-decoration: none;
   vertical-align: middle;
   outline: none;
 }
@@ -66,12 +66,9 @@
 }
 
 .sky-link-underline:hover::after {
-  content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  inset: 0;
+  content: '';
   border-bottom: 1px solid var(--sky-link-hover-text-color);
 }
 

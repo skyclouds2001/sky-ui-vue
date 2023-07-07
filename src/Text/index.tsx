@@ -2,7 +2,7 @@ import { defineComponent, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
 const Text = defineComponent({
-  name: 'Text',
+  name: 'SkyText',
   props: {
     type: {
       type: String as PropType<'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'>,

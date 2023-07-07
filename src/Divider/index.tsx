@@ -2,7 +2,7 @@ import { defineComponent } from 'vue'
 import './index.css'
 
 const Divider = defineComponent({
-  name: 'Divider',
+  name: 'SkyDivider',
   setup: () => {
     return () => (
       <>

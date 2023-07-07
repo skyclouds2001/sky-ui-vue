@@ -2,7 +2,7 @@ import { defineComponent, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
 const Button = defineComponent({
-  name: 'Button',
+  name: 'SkyButton',
   props: {
     type: {
       type: String as PropType<'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'>,

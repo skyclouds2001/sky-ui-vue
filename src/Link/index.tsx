@@ -2,7 +2,7 @@ import { defineComponent, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
 const Link = defineComponent({
-  name: 'Link',
+  name: 'SkyLink',
   props: {
     type: {
       type: String as PropType<'primary' | 'success' | 'warning' | 'danger' | 'info' | 'default'>,
@@ -15,7 +15,7 @@ const Link = defineComponent({
       required: true,
     },
     target: {
-      type: String as PropType<'_self', '_blank', '_parent', '_top'>,
+      type: String as PropType<'_self' | '_blank' | '_parent' | '_top'>,
       default: '_self',
       required: false,
       validator: (value: string) => ['_self', '_blank', '_parent', '_top'].includes(value),
