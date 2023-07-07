@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import legacy from '@vitejs/plugin-legacy'
@@ -28,12 +27,6 @@ export default defineConfig({
       },
     }),
   ],
-  resolve: {
-    alias: {
-      '~': __dirname,
-      '@': path.resolve(__dirname, './src/'),
-    },
-  },
   css: {
     devSourcemap: true,
   },
