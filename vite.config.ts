@@ -3,13 +3,7 @@ import path from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import legacy from '@vitejs/plugin-legacy'
-import { viteMockServe as mock } from 'vite-plugin-mock'
-import mkcert from 'vite-plugin-mkcert'
-import svgLoader from 'vite-svg-loader'
-// @ts-expect-error can't find type definition file
-import ElementPlus from 'unplugin-element-plus/vite'
 import visualizer from 'rollup-plugin-visualizer'
-import inspect from 'vite-plugin-inspect'
 import checker from 'vite-plugin-checker'
 
 export default defineConfig({
@@ -17,10 +11,6 @@ export default defineConfig({
     vue(),
     vueJsx(),
     legacy(),
-    mock(),
-    mkcert(),
-    svgLoader(),
-    ElementPlus({}),
     visualizer({
       filename: 'report.html',
       title: 'report',
@@ -28,7 +18,6 @@ export default defineConfig({
       gzipSize: true,
       brotliSize: true,
     }),
-    inspect(),
     checker({
       vueTsc: true,
       eslint: {
