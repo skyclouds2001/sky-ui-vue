@@ -1,6 +1,5 @@
 {
   "name": "@sky-fly/sky-ui",
-  "private": true,
   "version": "0.0.0",
   "license": "MIT",
   "description": "A template project of Vue-Vite",
@@ -12,6 +11,10 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "browser": "./dist/index.umd.js",
