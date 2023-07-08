@@ -1,7 +1,7 @@
 import { defineComponent, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
-const Button = defineComponent({
+const SkyButton = defineComponent({
   name: 'SkyButton',
   props: {
     type: {
@@ -57,4 +57,4 @@ const Button = defineComponent({
   },
 })
 
-export default Button
+export default SkyButton

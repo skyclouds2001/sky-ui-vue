@@ -1,7 +1,7 @@
 import { defineComponent } from 'vue'
 import './index.css'
 
-const Divider = defineComponent({
+const SkyDivider = defineComponent({
   name: 'SkyDivider',
   setup: () => {
     return () => (
@@ -12,4 +12,4 @@ const Divider = defineComponent({
   },
 })
 
-export default Divider
+export default SkyDivider

@@ -1,7 +1,7 @@
 import { defineComponent, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
-const Text = defineComponent({
+const SkyText = defineComponent({
   name: 'SkyText',
   props: {
     type: {
@@ -34,4 +34,4 @@ const Text = defineComponent({
   },
 })
 
-export default Text
+export default SkyText
