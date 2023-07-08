@@ -1,22 +1,10 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import legacy from '@vitejs/plugin-legacy'
-import visualizer from 'rollup-plugin-visualizer'
 import checker from 'vite-plugin-checker'
 
 export default defineConfig({
   plugins: [
     vue(),
-    vueJsx(),
-    legacy(),
-    visualizer({
-      filename: 'report.html',
-      title: 'report',
-      open: true,
-      gzipSize: true,
-      brotliSize: true,
-    }),
     checker({
       vueTsc: true,
       eslint: {
