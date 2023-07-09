@@ -56,7 +56,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "rollup --config rollup.config.js",
+    "build": "rollup --config rollup.config.js --bundleConfigAsCjs",
     "lint": "eslint --fix . && prettier --write . && stylelint --fix && markdownlint --fix **/*.md && vue-tsc --noEmit",
     "test": "vitest",
     "clean": "rimraf node_modules && rimraf dist",

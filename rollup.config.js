@@ -3,7 +3,7 @@ import NodeResolve from '@rollup/plugin-node-resolve'
 import Terser from '@rollup/plugin-terser'
 import Typescript from '@rollup/plugin-typescript'
 import VueJsx from '@vitejs/plugin-vue-jsx'
-import visualizer from 'rollup-plugin-visualizer'
+import { visualizer } from 'rollup-plugin-visualizer'
 import PostCSS from 'rollup-plugin-postcss'
 import autoprefixer from 'autoprefixer'
 
