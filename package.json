@@ -2,7 +2,7 @@
   "name": "@sky-fly/sky-ui",
   "version": "0.0.0",
   "license": "MIT",
-  "description": "A template project of Vue-Vite",
+  "description": "A ui component library for vue",
   "keywords": [
     "sky-fly",
     "ui",
@@ -30,13 +30,13 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "homepage": "https://github.com/skyclouds2001/vite-vue-template-sky#readme",
+  "homepage": "https://github.com/skyclouds2001/sky-ui#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skyclouds2001/vite-vue-template-sky.git"
+    "url": "git+https://github.com/skyclouds2001/sky-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/skyclouds2001/vite-vue-template-sky/issues",
+    "url": "hhttps://github.com/skyclouds2001/sky-ui/issues",
     "email": "skyclouds2001@163.com"
   },
   "author": {
