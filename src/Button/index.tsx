@@ -42,6 +42,11 @@ const SkyButton = defineComponent({
       required: false,
       validator: (value: string) => ['large', 'default', 'small'].includes(value),
     },
+    block: {
+      type: Boolean,
+      default: false,
+      required: false,
+    },
     plain: {
       type: Boolean,
       default: false,
@@ -54,7 +59,7 @@ const SkyButton = defineComponent({
   setup: (props, { slots }) => {
     return () => (
       <>
-        <button aria-disabled={props.disabled} disabled={props.disabled} type={props.nativeType} autofocus={props.autofocus} class={['sky-button', props.type !== 'default' ? `sky-button-${props.type}` : '', props.round ? 'sky-button-round' : '', props.circle ? 'sky-button-circle' : '', props.disabled ? 'sky-button-disabled' : '', props.size !== 'default' ? `sky-button-${props.size}` : '', props.plain ? 'sky-button-plain' : '']}>
+        <button aria-disabled={props.disabled} disabled={props.disabled} type={props.nativeType} autofocus={props.autofocus} class={['sky-button', props.type !== 'default' ? `sky-button-${props.type}` : '', props.round ? 'sky-button-round' : '', props.circle ? 'sky-button-circle' : '', props.disabled ? 'sky-button-disabled' : '', props.size !== 'default' ? `sky-button-${props.size}` : '', props.block ? 'sky-button-block' : '', props.plain ? 'sky-button-plain' : '']}>
           <span>{slots.default()}</span>
         </button>
       </>
