@@ -1,0 +1,15 @@
+.sky-space {
+  display: inline-flex;
+}
+
+.sky-space-item {
+  display: flex;
+}
+
+.sky-space-horizontal {
+  flex-direction: row;
+}
+
+.sky-space-vertical {
+  flex-direction: column;
+}
