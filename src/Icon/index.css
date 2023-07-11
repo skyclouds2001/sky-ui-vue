@@ -1,0 +1,12 @@
+.sky-icon {
+  color: inherit;
+  font-size: inherit;
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+}
