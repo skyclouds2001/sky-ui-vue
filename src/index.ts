@@ -6,4 +6,6 @@ export { default as SkyDivider } from './Divider'
 
 export { default as SkyLink } from './Link'
 
+export { default as SkySpace } from './Space'
+
 export { default as SkyText } from './Text'
