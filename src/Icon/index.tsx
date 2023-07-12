@@ -11,7 +11,7 @@ const SkyIcon = defineComponent({
     color: {
       type: String,
       default: '#333',
-    }
+    },
   },
   slots: Object as SlotsType<{
     default: () => any
@@ -19,7 +19,9 @@ const SkyIcon = defineComponent({
   setup: (props, { slots }) => {
     return () => (
       <>
-        <div class="sky-icon" style={{ fontSize: `${props.size}px`, color: props.color }}>{slots.default()}</div>
+        <div class="sky-icon" style={{ fontSize: `${props.size}px`, color: props.color }}>
+          {slots.default?.()}
+        </div>
       </>
     )
   },
