@@ -28,3 +28,5 @@ const SkyIcon = defineComponent({
 })
 
 export default SkyIcon
+
+export { default as Minus } from './Minus'

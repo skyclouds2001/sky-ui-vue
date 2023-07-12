@@ -1,5 +1,7 @@
 import './index.css'
 
+export { Minus } from './Icon'
+
 export { default as SkyButton } from './Button'
 
 export { default as SkyDivider } from './Divider'
