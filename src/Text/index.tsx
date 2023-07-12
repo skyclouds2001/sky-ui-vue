@@ -28,7 +28,7 @@ const SkyText = defineComponent({
   setup: (props, { slots }) => {
     return () => (
       <>
-        <span class={['sky-text', props.type !== 'default' ? `sky-text-${props.type}` : '', props.size !== 'default' ? `sky-text-${props.size}` : '', props.ellipsis ? 'sky-text-ellipsis' : '']}>{slots.default()}</span>
+        <span class={['sky-text', props.type !== 'default' ? `sky-text-${props.type}` : '', props.size !== 'default' ? `sky-text-${props.size}` : '', props.ellipsis ? 'sky-text-ellipsis' : '']}>{slots.default?.()}</span>
       </>
     )
   },
