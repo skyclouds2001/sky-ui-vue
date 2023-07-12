@@ -10,3 +10,8 @@
   color: inherit;
   fill: currentcolor;
 }
+
+.sky-icon svg {
+  width: 1em;
+  height: 1em;
+}
