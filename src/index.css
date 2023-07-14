@@ -1,10 +1,22 @@
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 :root {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size-adjust: 100%;
+  font-stretch: normal;
+  font-synthesis: none;
+  line-height: 1.5em;
+  text-rendering: optimizelegibility;
+  text-size-adjust: 100%;
   color-scheme: light;
 
   --sky-color-primary: #409eff;
