@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SkyButton, SkyDivider, SkyIcon, SkyLink, SkySpace, SkyText, Minus } from './../src'
+import { SkyButton, SkyDivider, SkyIcon, SkyLink, SkySpace, SkyText, Minus, Plus } from './../src'
 </script>
 
 <template>
@@ -118,7 +118,7 @@ import { SkyButton, SkyDivider, SkyIcon, SkyLink, SkySpace, SkyText, Minus } fro
       <Minus />
     </sky-icon>
     <sky-icon :size="25">
-      <Minus />
+      <Plus />
     </sky-icon>
   </div>
 </template>

@@ -1,6 +1,6 @@
 import './index.css'
 
-export { Minus } from './Icon'
+export { Minus, Plus } from './Icon'
 
 export { default as SkyButton } from './Button'
 
