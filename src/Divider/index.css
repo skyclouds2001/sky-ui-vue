@@ -1,7 +1,17 @@
 .el-divider {
+  position: relative;
   display: block;
   width: 100%;
-  height: 0;
+  height: 1px;
   margin: 16px 0;
   border: 1px solid var(--sky-border-color);
+}
+
+.el-divider-text {
+  position: absolute;
+  padding: 0 20px;
+  font-size: 14px;
+  color: var(--sky-text-color-primary);
+  background-color: var(--sky-bg-color);
+  transform: translateY(-50%);
 }
