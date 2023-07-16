@@ -46,7 +46,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/test/*.[jt]s?(x)'],
+      files: ['**/*.{test,spec}.{js,jsx,ts,tsx}'],
       extends: ['plugin:testing-library/vue', 'plugin:vitest/recommended'],
     },
     {

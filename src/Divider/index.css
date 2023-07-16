@@ -1,7 +1,30 @@
-.el-divider {
+.sky-divider {
+  position: relative;
   display: block;
   width: 100%;
-  height: 0;
+  height: 1px;
   margin: 16px 0;
   border: 1px solid var(--sky-border-color);
+}
+
+.sky-divider-text {
+  position: absolute;
+  padding: 0 20px;
+  font-size: 14px;
+  color: var(--sky-text-color-primary);
+  background-color: var(--sky-bg-color);
+  transform: translateY(-50%);
+}
+
+.sky-divider-text-left {
+  left: 20px;
+}
+
+.sky-divider-text-center {
+  left: 50%;
+  translate: -50%;
+}
+
+.sky-divider-text-right {
+  right: 20px;
 }

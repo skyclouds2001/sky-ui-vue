@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SkyButton, SkyDivider, SkyLink, SkyText } from './../src'
+import { SkyButton, SkyDivider, SkyIcon, SkyLink, SkySpace, SkyText, Minus, Plus } from './../src'
 </script>
 
 <template>
@@ -36,12 +36,26 @@ import { SkyButton, SkyDivider, SkyLink, SkyText } from './../src'
     <sky-button type="danger" disabled>test</sky-button>
   </div>
   <div class="margin: 0 25px">
+    <sky-button plain>test</sky-button>
+    <sky-button type="primary" plain>test</sky-button>
+    <sky-button type="info" plain>test</sky-button>
+    <sky-button type="success" plain>test</sky-button>
+    <sky-button type="warning" plain>test</sky-button>
+    <sky-button type="danger" plain>test</sky-button>
+  </div>
+  <div class="margin: 0 25px">
     <sky-button>test</sky-button>
     <sky-button size="small">test</sky-button>
     <sky-button size="large">test</sky-button>
   </div>
   <div class="margin: 0 25px">
+    <sky-button block>test</sky-button>
+  </div>
+  <div class="margin: 0 25px">
     <sky-divider />
+    <sky-divider>test</sky-divider>
+    <sky-divider position="left">test</sky-divider>
+    <sky-divider position="right">test</sky-divider>
   </div>
   <div class="margin: 0 25px">
     <sky-link href="#">test</sky-link>
@@ -84,6 +98,28 @@ import { SkyButton, SkyDivider, SkyLink, SkyText } from './../src'
     <sky-text>test</sky-text>
     <sky-text size="large">test</sky-text>
     <sky-text size="small">test</sky-text>
+  </div>
+  <div class="margin: 0 25px">
+    <sky-space>
+      <div>test</div>
+      <div>test</div>
+      <div>test</div>
+    </sky-space>
+  </div>
+  <div class="margin: 0 25px">
+    <sky-space direction="vertical">
+      <div>test</div>
+      <div>test</div>
+      <div>test</div>
+    </sky-space>
+  </div>
+  <div class="margin: 0 25px">
+    <sky-icon>
+      <Minus />
+    </sky-icon>
+    <sky-icon :size="25">
+      <Plus />
+    </sky-icon>
   </div>
 </template>
 
