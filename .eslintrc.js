@@ -32,6 +32,7 @@ module.exports = {
         ignore: ['package.json'],
       },
     ],
+    '@typescript-eslint/no-explicit-any': 'off',
   },
   settings: {
     'import/parsers': {
