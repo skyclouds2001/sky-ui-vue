@@ -16,14 +16,20 @@ const SkyDivider = defineComponent({
       required: false,
       validator: (value: string) => ['solid', 'dashed', 'dotted', 'hidden', 'none', 'double', 'groove', 'ridge', 'inset', 'outset'].includes(value),
     },
+    direction: {
+      type: String as PropType<'horizontal' | 'vertical'>,
+      default: 'horizontal',
+      required: false,
+      validator: (value: string) => ['horizontal', 'vertical'].includes(value),
+    },
   },
   slots: Object as SlotsType<{
-    default?: () => any
+    default?: () => unknown
   }>,
   setup: (props, { slots }) => {
     return () => (
       <>
-        <div class={['sky-divider']} style={{ borderStyle: props.type }}>
+        <div role="separator" aria-orientation={props.direction} class={['sky-divider', `sky-divider-${props.direction}`]} style={{ borderStyle: props.type }}>
           <span class={['sky-divider-text', `sky-divider-text-${props.position}`]}>{slots.default?.()}</span>
         </div>
       </>
