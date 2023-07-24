@@ -43,7 +43,7 @@ const SkyLink = defineComponent({
     },
   },
   slots: Object as SlotsType<{
-    default: () => any
+    default: () => unknown
   }>,
   setup: (props, { slots }) => {
     return () => (

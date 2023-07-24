@@ -20,13 +20,13 @@ const SkySpace = defineComponent({
     },
   },
   slots: Object as SlotsType<{
-    default: () => any
+    default: () => unknown[]
   }>,
   setup: (props, { slots }) => {
     return () => (
       <>
         <div class={['sky-space', `sky-space-${props.direction}`]} style={{ flexWrap: props.wrap ? 'wrap' : 'nowrap', gap: `${props.size}px` }}>
-          {slots.default?.().map((children: any) => (
+          {slots.default?.().map((children: unknown) => (
             <>
               <div class="sky-space-item">{children}</div>
             </>
