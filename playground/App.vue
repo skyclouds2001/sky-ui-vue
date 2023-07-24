@@ -58,6 +58,11 @@ import { SkyButton, SkyDivider, SkyIcon, SkyLink, SkySpace, SkyText, Minus, Plus
     <sky-divider position="right">test</sky-divider>
   </div>
   <div class="margin: 0 25px">
+    dd
+    <sky-divider direction="vertical" />
+    dd
+  </div>
+  <div class="margin: 0 25px">
     <sky-link href="#">test</sky-link>
     <sky-link href="#" type="primary">test</sky-link>
     <sky-link href="#" type="info">test</sky-link>
