@@ -1,5 +1,6 @@
 .sky-divider {
   position: relative;
+  border: 0;
 }
 
 .sky-divider-horizontal {
