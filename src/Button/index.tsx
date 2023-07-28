@@ -60,13 +60,14 @@ const SkyButton = defineComponent({
     },
   },
   slots: Object as SlotsType<{
-    default: () => unknown
+    default?: () => unknown
+    icon?: () => unknown
   }>,
   setup: (props, { slots }) => {
     return () => (
       <>
         <button aria-disabled={props.disabled} disabled={props.disabled} type={props.nativeType} autofocus={props.autofocus} class={['sky-button', props.type !== 'default' ? `sky-button-${props.type}` : '', props.round ? 'sky-button-round' : '', props.circle ? 'sky-button-circle' : '', props.disabled ? 'sky-button-disabled' : '', props.size !== 'default' ? `sky-button-${props.size}` : '', props.block ? 'sky-button-block' : '', props.plain ? 'sky-button-plain' : '']}>
-          {props.icon !== null && <SkyIcon>{h(props.icon)}</SkyIcon>}
+          {slots.icon !== undefined ? <SkyIcon>{slots.icon()}</SkyIcon> : props.icon !== null && <SkyIcon>{h(props.icon)}</SkyIcon>}
           <span>{slots.default?.()}</span>
         </button>
       </>

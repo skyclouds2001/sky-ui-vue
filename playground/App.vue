@@ -53,6 +53,12 @@ import { SkyButton, SkyDivider, SkyIcon, SkyLink, SkySpace, SkyText, Minus, Plus
   </div>
   <div class="margin: 0 25px">
     <sky-button :icon="Plus">test</sky-button>
+    <sky-button>
+      test
+      <template #icon>
+        <Plus />
+      </template>
+    </sky-button>
   </div>
   <div class="margin: 0 25px">
     <sky-divider />
