@@ -1,4 +1,5 @@
-import { defineComponent, type PropType, type SlotsType } from 'vue'
+import { type Component, defineComponent, h, type PropType, type SlotsType } from 'vue'
+import SkyIcon from '@/Icon'
 import './index.css'
 
 const SkyButton = defineComponent({
@@ -52,6 +53,11 @@ const SkyButton = defineComponent({
       default: false,
       required: false,
     },
+    icon: {
+      type: [Object, Function, null] as PropType<Component | null>,
+      required: false,
+      default: null,
+    },
   },
   slots: Object as SlotsType<{
     default: () => unknown
@@ -60,6 +66,7 @@ const SkyButton = defineComponent({
     return () => (
       <>
         <button aria-disabled={props.disabled} disabled={props.disabled} type={props.nativeType} autofocus={props.autofocus} class={['sky-button', props.type !== 'default' ? `sky-button-${props.type}` : '', props.round ? 'sky-button-round' : '', props.circle ? 'sky-button-circle' : '', props.disabled ? 'sky-button-disabled' : '', props.size !== 'default' ? `sky-button-${props.size}` : '', props.block ? 'sky-button-block' : '', props.plain ? 'sky-button-plain' : '']}>
+          {props.icon !== null && <SkyIcon>{h(props.icon)}</SkyIcon>}
           <span>{slots.default?.()}</span>
         </button>
       </>
