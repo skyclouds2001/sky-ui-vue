@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { SkyButton, SkyDivider, SkyIcon, SkyLink, SkySpace, SkyText, Minus, Plus } from './../src'
+import { SkyButton, SkyDivider, SkyIcon, SkyLink, SkySpace, SkyText, Minus, Plus } from '@'
 </script>
 
 <template>
