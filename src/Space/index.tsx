@@ -22,7 +22,9 @@ const SkySpace = defineComponent({
   slots: Object as SlotsType<{
     default: () => unknown[]
   }>,
-  setup: (props, { slots }) => {
+  setup: (props, { expose, slots }) => {
+    expose()
+
     return () => (
       <>
         <div class={['sky-space', `sky-space-${props.direction}`]} style={{ flexWrap: props.wrap ? 'wrap' : 'nowrap', gap: `${props.size}px` }}>

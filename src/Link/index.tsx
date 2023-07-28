@@ -45,7 +45,9 @@ const SkyLink = defineComponent({
   slots: Object as SlotsType<{
     default: () => unknown
   }>,
-  setup: (props, { slots }) => {
+  setup: (props, { expose, slots }) => {
+    expose()
+
     return () => (
       <>
         <a aria-disabled={props.disabled} href={props.href} target={props.target} download={props.download} class={['sky-link', props.type !== 'default' ? `sky-link-${props.type}` : '', props.disabled ? 'sky-link-disabled' : '', props.underline ? 'sky-link-underline' : '', props.size !== 'default' ? `sky-link-${props.size}` : '']}>

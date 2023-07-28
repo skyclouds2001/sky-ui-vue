@@ -16,7 +16,9 @@ const SkyIcon = defineComponent({
   slots: Object as SlotsType<{
     default: () => unknown
   }>,
-  setup: (props, { slots }) => {
+  setup: (props, { expose, slots }) => {
+    expose()
+
     return () => (
       <>
         <div class="sky-icon" style={{ fontSize: `${props.size}px`, color: props.color }}>
