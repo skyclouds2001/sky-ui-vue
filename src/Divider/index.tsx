@@ -26,7 +26,9 @@ const SkyDivider = defineComponent({
   slots: Object as SlotsType<{
     default?: () => unknown
   }>,
-  setup: (props, { slots }) => {
+  setup: (props, { expose, slots }) => {
+    expose()
+
     return () => (
       <>
         <div role="separator" aria-orientation={props.direction} class={['sky-divider', `sky-divider-${props.direction}`]} style={{ borderStyle: props.type }}>
