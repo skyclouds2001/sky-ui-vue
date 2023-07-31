@@ -1,3 +1,7 @@
 .sky-image {
   display: inline-block;
 }
+
+.sky-image > img {
+  vertical-align: middle;
+}
