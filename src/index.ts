@@ -8,6 +8,8 @@ export { default as SkyDivider } from './Divider'
 
 export { default as SkyIcon } from './Icon'
 
+export { default as SkyImage } from './Image'
+
 export { default as SkyLink } from './Link'
 
 export { default as SkySpace } from './Space'
