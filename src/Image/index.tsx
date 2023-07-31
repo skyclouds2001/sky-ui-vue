@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue'
+import { defineComponent, type PropType } from 'vue'
 import './index.css'
 
 const SkyImage = /* #__PURE__ */ defineComponent({
@@ -8,13 +8,30 @@ const SkyImage = /* #__PURE__ */ defineComponent({
       type: String,
       required: true,
     },
+    width: {
+      type: [Number, null] as PropType<number | null>,
+      required: false,
+      default: null,
+    },
+    height: {
+      type: [Number, null] as PropType<number | null>,
+      required: false,
+      default: null,
+    },
+    alt: {
+      type: String,
+      required: false,
+      default: '',
+    },
   },
   setup: (props, { expose }) => {
     expose()
 
     return () => (
       <>
-        <img class={['sky-image']} src={props.src} alt="" />
+        <div class="sky-image">
+          <img src={props.src} alt={props.alt} {...(props.width != null ? { width: props.width } : {})} {...(props.height != null ? { height: props.height } : {})} />
+        </div>
       </>
     )
   },
