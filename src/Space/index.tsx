@@ -1,7 +1,7 @@
 import { defineComponent, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
-const SkySpace = defineComponent({
+const SkySpace = /* #__PURE__ */ defineComponent({
   name: 'SkySpace',
   props: {
     direction: {

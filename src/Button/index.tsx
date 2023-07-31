@@ -2,7 +2,7 @@ import { type Component, defineComponent, h, type PropType, type SlotsType } fro
 import SkyIcon from '@/Icon'
 import './index.css'
 
-const SkyButton = defineComponent({
+const SkyButton = /* #__PURE__ */ defineComponent({
   name: 'SkyButton',
   props: {
     type: {

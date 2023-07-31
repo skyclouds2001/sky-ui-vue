@@ -1,7 +1,7 @@
 import { defineComponent, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
-const SkyDivider = defineComponent({
+const SkyDivider = /* #__PURE__ */ defineComponent({
   name: 'SkyDivider',
   props: {
     position: {

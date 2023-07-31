@@ -1,7 +1,7 @@
 import { defineComponent, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
-const SkyLink = defineComponent({
+const SkyLink = /* #__PURE__ */ defineComponent({
   name: 'SkyLink',
   props: {
     type: {

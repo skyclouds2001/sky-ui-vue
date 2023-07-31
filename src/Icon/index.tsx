@@ -1,7 +1,7 @@
 import { defineComponent, type SlotsType } from 'vue'
 import './index.css'
 
-const SkyIcon = defineComponent({
+const SkyIcon = /* #__PURE__ */ defineComponent({
   name: 'SkyIcon',
   props: {
     size: {
