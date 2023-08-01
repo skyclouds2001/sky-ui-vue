@@ -1,4 +1,4 @@
-import { defineComponent, type PropType } from 'vue'
+import { defineComponent, type PropType, ref, type SlotsType } from 'vue'
 import './index.css'
 
 const SkyImage = /* #__PURE__ */ defineComponent({
@@ -54,14 +54,35 @@ const SkyImage = /* #__PURE__ */ defineComponent({
       default: 'anonymous',
     },
   },
-  setup: (props, { expose }) => {
+  slots: Object as SlotsType<{
+    placeholder: () => unknown
+    error: () => unknown
+  }>,
+  emits: ['load', 'error'],
+  setup: (props, { emit, expose, slots }) => {
     expose()
+
+    const isLoading = ref(true)
+
+    const isError = ref(false)
+
+    const handleLoad = (e: Event): void => {
+      isLoading.value = false
+      isError.value = false
+      emit('load', e)
+    }
+
+    const handleError = (e: Event): void => {
+      isLoading.value = false
+      isError.value = true
+      emit('error', e)
+    }
 
     return () => (
       <>
         <div class="sky-image">
           {/* @ts-expect-error img element have fetchpriority and loading attribute */}
-          <img src={props.src} alt={props.alt} crossorigin={props.crossorigin} decoding={props.decoding} fetchpriority={props.priority} loading={props.loading} referrerpolicy={props.referrerpolicy} {...(props.width != null ? { width: props.width } : {})} {...(props.height != null ? { height: props.height } : {})} style={{ objectPosition: 'center', objectFit: props.fit }} />
+          {isError.value ? <div class="sky-image-error">{slots.error?.()}</div> : isLoading.value ? <div class="sky-image-placeholder">{slots.placeholder?.()}</div> : <img src={props.src} alt={props.alt} crossorigin={props.crossorigin} decoding={props.decoding} fetchpriority={props.priority} loading={props.loading} referrerpolicy={props.referrerpolicy} {...(props.width != null ? { width: props.width } : {})} {...(props.height != null ? { height: props.height } : {})} style={{ objectPosition: 'center', objectFit: props.fit }} onLoad={handleLoad} onError={handleError} />}
         </div>
       </>
     )
