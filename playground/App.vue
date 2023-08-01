@@ -138,6 +138,20 @@ import { SkyButton, SkyDivider, SkyIcon, SkyImage, SkyLink, SkySpace, SkyText, M
   <div class="margin: 0 25px">
     <sky-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" :width="100" :height="100" />
   </div>
+  <div class="margin: 0 25px">
+    <sky-image src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" :width="100" :height="100">
+      <template #placeholder>
+        <span>placeholder</span>
+      </template>
+    </sky-image>
+  </div>
+  <div class="margin: 0 25px">
+    <sky-image src="xxx" :width="100" :height="100">
+      <template #error>
+        <span>error</span>
+      </template>
+    </sky-image>
+  </div>
 </template>
 
 <style scoped lang="scss"></style>

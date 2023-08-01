@@ -81,8 +81,9 @@ const SkyImage = /* #__PURE__ */ defineComponent({
     return () => (
       <>
         <div class="sky-image">
+          {isLoading.value && <div class="sky-image-placeholder">{slots.placeholder?.()}</div>}
           {/* @ts-expect-error img element have fetchpriority and loading attribute */}
-          {isError.value ? <div class="sky-image-error">{slots.error?.()}</div> : isLoading.value ? <div class="sky-image-placeholder">{slots.placeholder?.()}</div> : <img src={props.src} alt={props.alt} crossorigin={props.crossorigin} decoding={props.decoding} fetchpriority={props.priority} loading={props.loading} referrerpolicy={props.referrerpolicy} {...(props.width != null ? { width: props.width } : {})} {...(props.height != null ? { height: props.height } : {})} style={{ objectPosition: 'center', objectFit: props.fit }} onLoad={handleLoad} onError={handleError} />}
+          {isError.value ? <div class="sky-image-error">{slots.error?.()}</div> : <img src={props.src} alt={props.alt} crossorigin={props.crossorigin} decoding={props.decoding} fetchpriority={props.priority} loading={props.loading} referrerpolicy={props.referrerpolicy} {...(props.width != null ? { width: props.width } : {})} {...(props.height != null ? { height: props.height } : {})} style={{ objectPosition: 'center', objectFit: props.fit }} onLoad={handleLoad} onError={handleError} />}
         </div>
       </>
     )
