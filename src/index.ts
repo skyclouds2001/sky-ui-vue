@@ -15,3 +15,5 @@ export { default as SkyLink } from './Link'
 export { default as SkySpace } from './Space'
 
 export { default as SkyText } from './Text'
+
+export const version = '0.0.2'
