@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue'
+import { type App, defineComponent, type Plugin } from 'vue'
 
 const Minus = /* #__PURE__ */ defineComponent({
   setup: () => {
@@ -10,4 +10,8 @@ const Minus = /* #__PURE__ */ defineComponent({
   },
 })
 
-export default Minus
+Minus.install = (app: App) => {
+  app.component(Minus.name, Minus)
+}
+
+export default Minus as typeof Minus & Plugin

@@ -1,4 +1,4 @@
-import { defineComponent, type SlotsType } from 'vue'
+import { type App, defineComponent, type Plugin, type SlotsType } from 'vue'
 import './index.css'
 
 const SkyIcon = /* #__PURE__ */ defineComponent({
@@ -29,7 +29,11 @@ const SkyIcon = /* #__PURE__ */ defineComponent({
   },
 })
 
-export default SkyIcon
+SkyIcon.install = (app: App) => {
+  app.component(SkyIcon.name, SkyIcon)
+}
+
+export default SkyIcon as typeof SkyIcon & Plugin
 
 export { default as Minus } from './Minus'
 

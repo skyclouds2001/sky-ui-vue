@@ -1,4 +1,4 @@
-import { defineComponent, type PropType, ref, type SlotsType } from 'vue'
+import { type App, defineComponent, type Plugin, type PropType, ref, type SlotsType } from 'vue'
 import './index.css'
 
 const SkyImage = /* #__PURE__ */ defineComponent({
@@ -90,4 +90,8 @@ const SkyImage = /* #__PURE__ */ defineComponent({
   },
 })
 
-export default SkyImage
+SkyImage.install = (app: App) => {
+  app.component(SkyImage.name, SkyImage)
+}
+
+export default SkyImage as typeof SkyImage & Plugin

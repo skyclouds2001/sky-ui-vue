@@ -1,4 +1,4 @@
-import { defineComponent, type PropType, type SlotsType } from 'vue'
+import { type App, defineComponent, type Plugin, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
 const SkyLink = /* #__PURE__ */ defineComponent({
@@ -58,4 +58,8 @@ const SkyLink = /* #__PURE__ */ defineComponent({
   },
 })
 
-export default SkyLink
+SkyLink.install = (app: App) => {
+  app.component(SkyLink.name, SkyLink)
+}
+
+export default SkyLink as typeof SkyLink & Plugin

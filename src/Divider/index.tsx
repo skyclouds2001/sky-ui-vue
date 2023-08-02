@@ -1,4 +1,4 @@
-import { defineComponent, type PropType, type SlotsType } from 'vue'
+import { type App, defineComponent, type Plugin, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
 const SkyDivider = /* #__PURE__ */ defineComponent({
@@ -39,4 +39,8 @@ const SkyDivider = /* #__PURE__ */ defineComponent({
   },
 })
 
-export default SkyDivider
+SkyDivider.install = (app: App) => {
+  app.component(SkyDivider.name, SkyDivider)
+}
+
+export default SkyDivider as typeof SkyDivider & Plugin
