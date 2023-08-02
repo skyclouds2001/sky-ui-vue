@@ -1,0 +1,29 @@
+.sky-image {
+  position: relative;
+  display: inline-block;
+}
+
+.sky-image > img {
+  vertical-align: middle;
+}
+
+.sky-image-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--sky-fill-color-light);
+}
+
+.sky-image-placeholder + img {
+  opacity: 0;
+}
+
+.sky-image-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--sky-text-color-placeholder);
+  vertical-align: middle;
+  background-color: var(--sky-fill-color-light);
+}

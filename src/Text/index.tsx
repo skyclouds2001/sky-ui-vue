@@ -1,7 +1,7 @@
-import { defineComponent, type PropType, type SlotsType } from 'vue'
+import { type App, defineComponent, type Plugin, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
-const SkyText = defineComponent({
+const SkyText = /* #__PURE__ */ defineComponent({
   name: 'SkyText',
   props: {
     type: {
@@ -36,4 +36,8 @@ const SkyText = defineComponent({
   },
 })
 
-export default SkyText
+SkyText.install = (app: App) => {
+  app.component(SkyText.name, SkyText)
+}
+
+export default SkyText as typeof SkyText & Plugin

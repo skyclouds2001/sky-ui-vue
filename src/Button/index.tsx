@@ -1,8 +1,8 @@
-import { type Component, defineComponent, h, type PropType, type SlotsType } from 'vue'
+import { type App, type Component, defineComponent, h, type Plugin, type PropType, type SlotsType } from 'vue'
 import SkyIcon from '@/Icon'
 import './index.css'
 
-const SkyButton = defineComponent({
+const SkyButton = /* #__PURE__ */ defineComponent({
   name: 'SkyButton',
   props: {
     type: {
@@ -77,4 +77,8 @@ const SkyButton = defineComponent({
   },
 })
 
-export default SkyButton
+SkyButton.install = (app: App) => {
+  app.component(SkyButton.name, SkyButton)
+}
+
+export default SkyButton as typeof SkyButton & Plugin

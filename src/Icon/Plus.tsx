@@ -1,6 +1,6 @@
-import { defineComponent } from 'vue'
+import { type App, defineComponent, type Plugin } from 'vue'
 
-const Plus = defineComponent({
+const Plus = /* #__PURE__ */ defineComponent({
   setup: () => {
     return () => (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
@@ -10,4 +10,8 @@ const Plus = defineComponent({
   },
 })
 
-export default Plus
+Plus.install = (app: App) => {
+  app.component(Plus.name, Plus)
+}
+
+export default Plus as typeof Plus & Plugin

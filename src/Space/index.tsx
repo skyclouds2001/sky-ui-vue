@@ -1,7 +1,7 @@
-import { defineComponent, type PropType, type SlotsType } from 'vue'
+import { type App, defineComponent, type Plugin, type PropType, type SlotsType } from 'vue'
 import './index.css'
 
-const SkySpace = defineComponent({
+const SkySpace = /* #__PURE__ */ defineComponent({
   name: 'SkySpace',
   props: {
     direction: {
@@ -39,4 +39,8 @@ const SkySpace = defineComponent({
   },
 })
 
-export default SkySpace
+SkySpace.install = (app: App) => {
+  app.component(SkySpace.name, SkySpace)
+}
+
+export default SkySpace as typeof SkySpace & Plugin

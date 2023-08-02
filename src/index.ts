@@ -1,15 +1,43 @@
+import type { Plugin } from 'vue'
+
 import './index.css'
 
-export { Minus, Plus } from './Icon'
+import SkyButton from './Button'
 
-export { default as SkyButton } from './Button'
+import SkyDivider from './Divider'
 
-export { default as SkyDivider } from './Divider'
+import SkyIcon, { Minus, Plus } from './Icon'
 
-export { default as SkyIcon } from './Icon'
+import SkyImage from './Image'
 
-export { default as SkyLink } from './Link'
+import SkyLink from './Link'
 
-export { default as SkySpace } from './Space'
+import SkySpace from './Space'
 
-export { default as SkyText } from './Text'
+import SkyText from './Text'
+
+export { Minus, Plus, SkyButton, SkyDivider, SkyIcon, SkyImage, SkyLink, SkySpace, SkyText }
+
+export const version = '0.0.2'
+
+const components = {
+  Minus,
+  Plus,
+  SkyButton,
+  SkyDivider,
+  SkyIcon,
+  SkyImage,
+  SkyLink,
+  SkySpace,
+  SkyText,
+}
+
+const SkyUI: Plugin & Record<'version', string> & typeof components = {
+  ...components,
+  version,
+  install: (app) => {
+    Object.entries(components).forEach(([_, component]) => app.use(component))
+  },
+}
+
+export default SkyUI
