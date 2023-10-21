@@ -4,8 +4,7 @@
   "license": "MIT",
   "description": "A ui component library for vue",
   "keywords": [
-    "sky-fly",
-    "ui",
+    "vue",
     "component"
   ],
   "files": [
