@@ -1,4 +1,4 @@
-# sky-admin
+# sky-ui
 
 ## 0.0.0
 
