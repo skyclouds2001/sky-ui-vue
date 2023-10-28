@@ -1,3 +1,3 @@
-# @sky-fly/sky-ui
+# sky-ui
 
 A ui component library for vue

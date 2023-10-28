@@ -24,7 +24,7 @@ export default defineConfig({
       globals: {
         vue: 'Vue',
       },
-      name: 'vui',
+      name: 'sky-ui',
     },
   ],
   external: ['vue'],
