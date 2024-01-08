@@ -882,6 +882,11 @@ packages:
     engines: {node: ^14 || ^16 || >=18}
     dev: true
 
+  /@csstools/color-helpers@4.0.0:
+    resolution: {integrity: sha512-wjyXB22/h2OvxAr3jldPB7R7kjTUEzopvjitS8jWtyd8fN6xJ8vy1HnHu0ZNfEkqpBJgQ76Q+sBDshWcMvTa/w==}
+    engines: {node: ^14 || ^16 || >=18}
+    dev: true
+
   /@csstools/css-calc@1.1.4(@csstools/css-parser-algorithms@2.3.2)(@csstools/css-tokenizer@2.2.1):
     resolution: {integrity: sha512-ZV1TSmToiNcQL1P3hfzlzZzA02mmVkVmXGaUDUqpYUG84PmLhVSZpKX+KfxAuOcK7de04UXSQPBrAvaya6iiGg==}
     engines: {node: ^14 || ^16 || >=18}
@@ -1208,13 +1213,13 @@ packages:
       postcss: 8.4.31
     dev: true
 
-  /@csstools/postcss-text-decoration-shorthand@3.0.3(postcss@8.4.31):
-    resolution: {integrity: sha512-d5J9m49HhqXRcw1S6vTZuviHi/iknUKGjBpChiNK1ARg9sSa3b8m5lsWz5Izs8ISORZdv2bZRwbw5Z2R6gQ9kQ==}
+  /@csstools/postcss-text-decoration-shorthand@3.0.4(postcss@8.4.31):
+    resolution: {integrity: sha512-yUZmbnUemgQmja7SpOZeU45+P49wNEgQguRdyTktFkZsHf7Gof+ZIYfvF6Cm+LsU1PwSupy4yUeEKKjX5+k6cQ==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
     dependencies:
-      '@csstools/color-helpers': 3.0.2
+      '@csstools/color-helpers': 4.0.0
       postcss: 8.4.31
       postcss-value-parser: 4.2.0
     dev: true
@@ -7431,7 +7436,7 @@ packages:
       '@csstools/postcss-relative-color-syntax': 2.0.7(postcss@8.4.31)
       '@csstools/postcss-scope-pseudo-class': 3.0.0(postcss@8.4.31)
       '@csstools/postcss-stepped-value-functions': 3.0.2(postcss@8.4.31)
-      '@csstools/postcss-text-decoration-shorthand': 3.0.3(postcss@8.4.31)
+      '@csstools/postcss-text-decoration-shorthand': 3.0.4(postcss@8.4.31)
       '@csstools/postcss-trigonometric-functions': 3.0.2(postcss@8.4.31)
       '@csstools/postcss-unset-value': 3.0.0(postcss@8.4.31)
       autoprefixer: 10.4.16(postcss@8.4.31)
