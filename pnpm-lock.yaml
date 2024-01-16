@@ -2163,14 +2163,14 @@ packages:
     dependencies:
       '@vitest/utils': 0.34.6
       p-limit: 4.0.0
-      pathe: 1.1.1
+      pathe: 1.1.2
     dev: true
 
   /@vitest/snapshot@0.34.6:
     resolution: {integrity: sha512-B3OZqYn6k4VaN011D+ve+AA4whM4QkcwcrwaKwAbyyvS/NB1hCWjFIBQxAQQSQir9/RtyAAGuq+4RJmbn2dH4w==}
     dependencies:
       magic-string: 0.30.5
-      pathe: 1.1.1
+      pathe: 1.1.2
       pretty-format: 29.7.0
     dev: true
 
@@ -2189,7 +2189,7 @@ packages:
       fast-glob: 3.3.2
       fflate: 0.8.1
       flatted: 3.2.9
-      pathe: 1.1.1
+      pathe: 1.1.2
       picocolors: 1.0.0
       sirv: 2.0.3
       vitest: 0.34.6(@vitest/ui@0.34.6)(jsdom@23.0.1)(terser@5.24.0)
@@ -6143,7 +6143,7 @@ packages:
     resolution: {integrity: sha512-i/Ykufi2t1EZ6NaPLdfnZk2AX8cs0d+mTzVKuPfqPKPatxLApaBoxJQ9x1/uckXtrS/U5oisPMDkNs0yQTaBRg==}
     dependencies:
       acorn: 8.11.2
-      pathe: 1.1.1
+      pathe: 1.1.2
       pkg-types: 1.0.3
       ufo: 1.3.2
     dev: true
@@ -6537,8 +6537,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /pathe@1.1.1:
-    resolution: {integrity: sha512-d+RQGp0MAYTIaDBIMmOfMwz3E+LOZnxx1HZd5R18mmCZY0QBlK0LDZfPc8FW8Ed2DlvsuE6PRjroDY+wg4+j/Q==}
+  /pathe@1.1.2:
+    resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
     dev: true
 
   /pathval@1.1.1:
@@ -6586,7 +6586,7 @@ packages:
     dependencies:
       jsonc-parser: 3.2.0
       mlly: 1.4.2
-      pathe: 1.1.1
+      pathe: 1.1.2
     dev: true
 
   /pnpm@8.10.0:
@@ -9014,7 +9014,7 @@ packages:
       cac: 6.7.14
       debug: 4.3.4
       mlly: 1.4.2
-      pathe: 1.1.1
+      pathe: 1.1.2
       picocolors: 1.0.0
       vite: 5.0.4(@types/node@20.10.1)(terser@5.24.0)
     transitivePeerDependencies:
@@ -9168,7 +9168,7 @@ packages:
       jsdom: 23.0.1
       local-pkg: 0.4.3
       magic-string: 0.30.5
-      pathe: 1.1.1
+      pathe: 1.1.2
       picocolors: 1.0.0
       std-env: 3.5.0
       strip-literal: 1.3.0
