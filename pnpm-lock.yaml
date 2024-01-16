@@ -893,6 +893,17 @@ packages:
       '@csstools/css-tokenizer': 2.2.1
     dev: true
 
+  /@csstools/css-calc@1.1.6(@csstools/css-parser-algorithms@2.5.0)(@csstools/css-tokenizer@2.2.3):
+    resolution: {integrity: sha512-YHPAuFg5iA4qZGzMzvrQwzkvJpesXXyIUyaONflQrjtHB+BcFFbgltJkIkb31dMGO4SE9iZFA4HYpdk7+hnYew==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-parser-algorithms': ^2.5.0
+      '@csstools/css-tokenizer': ^2.2.3
+    dependencies:
+      '@csstools/css-parser-algorithms': 2.5.0(@csstools/css-tokenizer@2.2.3)
+      '@csstools/css-tokenizer': 2.2.3
+    dev: true
+
   /@csstools/css-color-parser@1.4.0(@csstools/css-parser-algorithms@2.3.2)(@csstools/css-tokenizer@2.2.1):
     resolution: {integrity: sha512-SlGd8E6ron24JYQPQAIzu5tvmWi1H4sDKTdA7UDnwF45oJv7AVESbOlOO1YjfBhrQFuvLWUgKiOY9DwGoAxwTA==}
     engines: {node: ^14 || ^16 || >=18}
@@ -915,8 +926,22 @@ packages:
       '@csstools/css-tokenizer': 2.2.1
     dev: true
 
+  /@csstools/css-parser-algorithms@2.5.0(@csstools/css-tokenizer@2.2.3):
+    resolution: {integrity: sha512-abypo6m9re3clXA00eu5syw+oaPHbJTPapu9C4pzNsJ4hdZDzushT50Zhu+iIYXgEe1CxnRMn7ngsbV+MLrlpQ==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      '@csstools/css-tokenizer': ^2.2.3
+    dependencies:
+      '@csstools/css-tokenizer': 2.2.3
+    dev: true
+
   /@csstools/css-tokenizer@2.2.1:
     resolution: {integrity: sha512-Zmsf2f/CaEPWEVgw29odOj+WEVoiJy9s9NOv5GgNY9mZ1CZ7394By6wONrONrTsnNDv6F9hR02nvFihrGVGHBg==}
+    engines: {node: ^14 || ^16 || >=18}
+    dev: true
+
+  /@csstools/css-tokenizer@2.2.3:
+    resolution: {integrity: sha512-pp//EvZ9dUmGuGtG1p+n17gTHEOqu9jO+FiCUjNN3BDmyhdA2Jq9QsVeR7K8/2QCK17HSsioPlTW9ZkzoWb3Lg==}
     engines: {node: ^14 || ^16 || >=18}
     dev: true
 
@@ -1219,15 +1244,15 @@ packages:
       postcss-value-parser: 4.2.0
     dev: true
 
-  /@csstools/postcss-trigonometric-functions@3.0.2(postcss@8.4.31):
-    resolution: {integrity: sha512-AwzNhF4QOKaLOKvMljwwFkeYXwufhRO15G+kKohHkyoNOL75xWkN+W2Y9ik9tSeAyDv+cYNlYaF+o/a79WjVjg==}
+  /@csstools/postcss-trigonometric-functions@3.0.4(postcss@8.4.31):
+    resolution: {integrity: sha512-qj4Cxth6c38iNYzfJJWAxt8jsLrZaMVmbfGDDLOlI2YJeZoC3A5Su6/Kr7oXaPFRuspUu+4EQHngOktqVHWfVg==}
     engines: {node: ^14 || ^16 || >=18}
     peerDependencies:
       postcss: ^8.4
     dependencies:
-      '@csstools/css-calc': 1.1.4(@csstools/css-parser-algorithms@2.3.2)(@csstools/css-tokenizer@2.2.1)
-      '@csstools/css-parser-algorithms': 2.3.2(@csstools/css-tokenizer@2.2.1)
-      '@csstools/css-tokenizer': 2.2.1
+      '@csstools/css-calc': 1.1.6(@csstools/css-parser-algorithms@2.5.0)(@csstools/css-tokenizer@2.2.3)
+      '@csstools/css-parser-algorithms': 2.5.0(@csstools/css-tokenizer@2.2.3)
+      '@csstools/css-tokenizer': 2.2.3
       postcss: 8.4.31
     dev: true
 
@@ -7432,7 +7457,7 @@ packages:
       '@csstools/postcss-scope-pseudo-class': 3.0.0(postcss@8.4.31)
       '@csstools/postcss-stepped-value-functions': 3.0.2(postcss@8.4.31)
       '@csstools/postcss-text-decoration-shorthand': 3.0.3(postcss@8.4.31)
-      '@csstools/postcss-trigonometric-functions': 3.0.2(postcss@8.4.31)
+      '@csstools/postcss-trigonometric-functions': 3.0.4(postcss@8.4.31)
       '@csstools/postcss-unset-value': 3.0.0(postcss@8.4.31)
       autoprefixer: 10.4.16(postcss@8.4.31)
       browserslist: 4.22.1
