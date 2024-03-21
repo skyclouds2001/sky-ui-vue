@@ -2222,8 +2222,8 @@ packages:
       path-browserify: 1.0.1
     dev: true
 
-  /@vue/babel-helper-vue-transform-on@1.1.5:
-    resolution: {integrity: sha512-SgUymFpMoAyWeYWLAY+MkCK3QEROsiUnfaw5zxOVD/M64KQs8D/4oK6Q5omVA2hnvEOE0SCkH2TZxs/jnnUj7w==}
+  /@vue/babel-helper-vue-transform-on@1.2.2:
+    resolution: {integrity: sha512-nOttamHUR3YzdEqdM/XXDyCSdxMA9VizUKoroLX6yTyRtggzQMHXcmwh8a7ZErcJttIBIc9s68a1B8GZ+Dmvsw==}
     dev: true
 
   /@vue/babel-plugin-jsx@1.1.5(@babel/core@7.23.5):
@@ -2237,7 +2237,7 @@ packages:
       '@babel/template': 7.22.15
       '@babel/traverse': 7.23.5
       '@babel/types': 7.23.5
-      '@vue/babel-helper-vue-transform-on': 1.1.5
+      '@vue/babel-helper-vue-transform-on': 1.2.2
       camelcase: 6.3.0
       html-tags: 3.3.1
       svg-tags: 1.0.0
